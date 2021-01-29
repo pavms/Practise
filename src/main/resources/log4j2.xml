@@ -1,0 +1,15 @@
+<Configuration>
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} QUACK [%t] %highlight{%-5level} %logger{1}: %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.pavms" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
